@@ -1,0 +1,102 @@
+.container {
+    height: 80vh;
+    background-color: black;
+    /* overflow: hidden; */
+    /* margin: 0rem; */
+    display: grid;
+    place-items: center;
+}
+
+:root {
+    --green: rgb(42, 252, 152);
+    --blue: rgb(41, 121, 255);
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.word {
+    font-size: clamp(2rem, 5vw, 10rem);
+    font-family: 'Tangerine', serif;
+    margin: 0rem;
+    text-transform: uppercase;
+    transition: opacity 500ms ease;
+}
+
+#text:has(.pop:hover) .word:not(.pop:hover) {
+    opacity: 0.5;
+}
+
+.pop span {
+    display: inline-block
+}
+.pop > .letter {
+    transition: transform 350ms ease;
+}
+
+.pop:hover > .letter {
+    transition-duration: 1000ms;
+}
+
+.pop:hover > .letter {
+    animation: float 10s ease infinite;
+}
+
+.pop:hover > .letter {
+    background: linear-gradient(
+        to right,
+        var(--blue),
+        var(--green),
+        var(--blue)
+    );
+    background-size: 1000%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: background-pan 150s linear infinite;
+}
+
+/* float words */
+.pop:hover > .letter:nth-child(1) {
+    transform: translate(-80%, 60%) rotate(87deg);
+}
+
+.pop:hover > .letter:nth-child(2) {
+    transform: translate(-40%, 20%) rotate(42deg);
+}
+
+.pop:hover > .letter:nth-child(3) {
+    transform: translate(-10%, 60%) rotate(-64deg);
+}
+
+.pop:hover > .letter:nth-child(4) {
+    transform: translate(0%, 8%) rotate(-87deg);
+}
+
+.pop:hover > .letter:nth-child(5) {
+    transform: translate(0%, -20%) rotate(55deg);
+}
+
+.pop:hover > .letter:nth-child(6) {
+    transform: translate(0%, 20%) rotate(-30deg);
+}
+
+.pop:hover > .letter:nth-child(7) {
+    transform: translate(0%, -40%) rotate(-55deg);
+}
+
+.pop:hover > .letter:nth-child(8) {
+    transform: translate(0%, 15%) rotate(10deg);
+}
+
+.pop:hover > .letter:nth-child(9) {
+    transform: translate(0%, 15%) rotate(-62deg);
+}
+
+.pop:hover > .letter:nth-child(10) {
+    transform: translate(69%, -50%) rotate(-40deg);
+}
+.pop:hover > .letter:nth-child(11) {
+    transform: translate(96%, -69%) rotate(-30deg);
+}
